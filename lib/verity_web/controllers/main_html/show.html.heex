@@ -1,0 +1,15 @@
+<.header>
+  Main <%= @main.id %>
+  <:subtitle>This is a main record from your database.</:subtitle>
+  <:actions>
+    <.link href={~p"/samples/#{@main}/edit"}>
+      <.button>Edit main</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Input"><%= @main.input %></:item>
+</.list>
+
+<.back navigate={~p"/samples"}>Back to samples</.back>

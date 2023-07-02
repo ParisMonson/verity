@@ -1,0 +1,8 @@
+<.header>
+  Edit Main <%= @main.id %>
+  <:subtitle>Use this form to manage main records in your database.</:subtitle>
+</.header>
+
+<.main_form changeset={@changeset} action={~p"/samples/#{@main}"} />
+
+<.back navigate={~p"/samples"}>Back to samples</.back>

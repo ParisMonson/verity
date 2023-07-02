@@ -1,6 +1,6 @@
 defmodule VerityWeb.Router do
-  use VerityWeb, :router
 
+  use VerityWeb, :router
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -16,10 +16,9 @@ defmodule VerityWeb.Router do
 
   scope "/", VerityWeb do
     pipe_through :browser
-
     get "/", PageController, :home
+    get "/verity", MainController, :index
   end
-
   # Other scopes may use custom stacks.
   # scope "/api", VerityWeb do
   #   pipe_through :api
